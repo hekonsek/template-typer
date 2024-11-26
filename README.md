@@ -1,1 +1,1 @@
-# template-typer
+# Python Typer cli application template
