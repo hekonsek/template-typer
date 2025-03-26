@@ -1,11 +1,19 @@
 import typer
 
+# Root command
 
-app = typer.Typer()
+app = typer.Typer(no_args_is_help=True)
 
-@app.command(name="helloworld")
-def helloworld():
-    typer.echo("Hello World")
+# Some subcommands section 
+
+app_some_command = typer.Typer(no_args_is_help=True)
+app.add_typer(app_some_command, name="some-command")
+
+@app_some_command.command(name="subcommand")
+def subcommand():
+    typer.echo("Hello world!")
+
+# Main section
 
 def main():
     app()
