@@ -1,4 +1,5 @@
 import typer
+from typer import colors
 from termcolor import colored
 
 # Root command
@@ -17,8 +18,16 @@ def subcommand():
 # Colors
 
 @app.command()
-def colors():
-    typer.echo(f"I'm {colored("green text", "green")}!")
+def styles():
+   # Typer.style
+    typer.echo(f"I'm {typer.style("bold and italic", bold=True, italic=True)}.")
+
+    # Typer.secho
+    typer.secho("I'm cyan text.", fg=colors.CYAN)
+    typer.secho("I'm bright magnetta background!", bg=colors.BRIGHT_MAGENTA)
+
+    # Termcolor
+    typer.echo(f"I'm {colored("green text by termcolor", "green")} without Typer dependency.")
 
 # Main section
 
