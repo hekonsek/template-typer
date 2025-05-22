@@ -28,4 +28,4 @@ jobs:
     - name: Install project dependencies
       run: poetry install
     - name: Check dependencies
-      run: poetry run check-dependencies
+      run: poetry run check-depz
