@@ -23,7 +23,6 @@ jobs:
         key: poetry-cache
         restore-keys: |
           poetry-cache
-      
     - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v3
