@@ -29,6 +29,19 @@ def styles():
     # Termcolor
     typer.echo(f"I'm {colored("green text by termcolor", "green")} without Typer dependency.")
 
+# Input prompt
+
+@app.command()
+def prompt():
+    name = typer.prompt("What is your name?")
+    typer.echo(f"Hello, {name}!")
+
+    confirm = typer.confirm("Are you sure it is your name?")
+    if confirm:
+        typer.echo("Nice name!")
+    else:
+        typer.echo("Please don't lie to me then. 😉")
+
 # Main section
 
 def main():
