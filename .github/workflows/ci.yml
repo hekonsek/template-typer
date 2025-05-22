@@ -30,8 +30,6 @@ jobs:
         python-version: "3.12"
     - name: Install poetry
       run: pip install poetry
-    - name: Install poetry export plugin
-      run: poetry self add poetry-plugin-export      
     - name: Install project dependencies
       run: poetry install
     - name: Check dependencies
